@@ -11,6 +11,7 @@ on:
   pull_request: # [master, next]
     paths:
       - s3/**
+  workflow_dispatch:
 
 
 jobs:
