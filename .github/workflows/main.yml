@@ -15,8 +15,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Checkout
+        uses: actions/checkout@v2
         
   deploy-Desenvolvimento:
     runs-on: ubuntu-latest
@@ -25,8 +25,8 @@ jobs:
       url: ferhmdiogo@gmail.com
     needs: build
     steps:
-      - name: Run a one-line script
-        run: echo Deploy Develop!
+      - name: Checkout
+        uses: actions/checkout@v2
         
   deploy-Homologacao:
     runs-on: ubuntu-latest
@@ -35,8 +35,8 @@ jobs:
       url: ferhmdiogo@gmail.com
     needs: deploy-Desenvolvimento
     steps:
-      - name: Run a one-line script
-        run: echo Deploy Homolog!
+      - name: Checkout
+        uses: actions/checkout@v2
         
   deploy-main:
     runs-on: ubuntu-latest
@@ -45,5 +45,5 @@ jobs:
       url: ferhmdiogo@gmail.com
     needs: deploy-Homologacao
     steps:
-      - name: Run a one-line script
-        run: echo Deploy Prod!
+      - name: Checkout
+        uses: actions/checkout@v2
